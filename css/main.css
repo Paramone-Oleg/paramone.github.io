@@ -196,6 +196,13 @@ h1#logotype a {
     max-width: 100%;
 }
 
+.col-auto {
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: auto;
+    max-width: 100%;
+}
+
 .col-3 {
     -ms-flex: 0 0 25%;
     flex: 0 0 25%;

@@ -71,8 +71,8 @@ h1#logotype a {
     position: relative;
     overflow: hidden;
     position: absolute;
-    right: 0;
-    top: 14px
+    right: 15px;
+    top: 12px
 }
 
 .hamburger-icon .ico {
@@ -84,7 +84,7 @@ h1#logotype a {
 }
 
 .hamburger-icon .ico:nth-child(2) {
-    margin: 17px 0 17px 15px;
+    margin: 16px 0 16px 15px;
 }
 
 .hamburger-icon .ico:nth-child(3) {
@@ -101,7 +101,7 @@ h1#logotype a {
 }
 
 #menuCheck:checked + .hamburger-icon .ico {
-    margin: 0 6px;
+    margin: 0 7px;
     -webkit-transform: translate3d(0, 20px, 0) rotate(45deg);
     -moz-transform: translate3d(0, 20px, 0) rotate(45deg);
     -o-transform: translate3d(0, 20px, 0) rotate(45deg);
@@ -133,7 +133,7 @@ h1#logotype a {
 #menuCheck:checked + .hamburger-icon + .bg {
     cursor: pointer;
     position: fixed;
-    z-index: 9;
+    z-index: 11;
     top: 65px;
     left: 0;
     width: 100%;

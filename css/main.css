@@ -71,20 +71,20 @@ h1#logotype a {
     position: relative;
     overflow: hidden;
     position: absolute;
-    right: 0;
-    top: 14px
+    right: 15px;
+    top: 12px
 }
 
 .hamburger-icon .ico {
     background: #000;
     display: block;
-    height: 1px;
+    height: 2px;
     margin: 0;
     transition: .2s all;
 }
 
 .hamburger-icon .ico:nth-child(2) {
-    margin: 17px 0 17px 15px;
+    margin: 16px 0 16px 15px;
 }
 
 .hamburger-icon .ico:nth-child(3) {

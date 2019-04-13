@@ -21,6 +21,7 @@ a {
     text-decoration: none;
 }
 
+/*--Header--*/
 header {
     line-height: 64px;
     background: #fff;
@@ -30,12 +31,6 @@ header {
     z-index: 99;
     border-bottom: 1px solid #ccc;
     overflow: hidden;
-}
-
-.container {
-    margin: 0 auto;
-    padding: 0 15px;
-    max-width: 80%;
 }
 
 header .container {
@@ -147,18 +142,18 @@ h1#logotype a {
 
 #menuCheck ~ nav {
     position: fixed;
-    padding:2em;
+    padding: 2em;
     right: -100%;
     top: 65px;
     width: 40%;
     max-width: 100%;
     min-width: 300px;
-    height: calc(100% - 65px);
+    height: calc(100% - 130px);
     z-index: 12;
     transition: .3s;
     visibility: hidden;
     opacity: 0;
-    background:#fff;
+    background: #fff;
     border-left: 1px solid #ccc;
 }
 
@@ -169,6 +164,12 @@ h1#logotype a {
 }
 
 /*--Grid system--*/
+.container {
+    margin: 0 auto;
+    padding: 0 15px;
+    max-width: 80%;
+}
+
 .row {
     display: -ms-flexbox;
     display: flex;
@@ -229,4 +230,20 @@ h1#logotype a {
     -ms-flex: 0 0 100%;
     flex: 0 0 100%;
     max-width: 100%
+}
+
+/*--Footer--*/
+footer {
+    line-height: 64px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    background: #fff;
+    z-index: 98;
+    border-top: 1px solid #ccc;
+    overflow: hidden;
+}
+
+footer [class*=col] + [class*=col] {
+    border-left: 1px solid #ccc;
 }

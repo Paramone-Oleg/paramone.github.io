@@ -97,7 +97,7 @@ h1#logotype a {
 }
 
 .hamburger-icon:hover .ico:nth-child(2) {
-    margin: 17px;
+    margin: 16px;
 }
 
 #menuCheck:checked + .hamburger-icon .ico {

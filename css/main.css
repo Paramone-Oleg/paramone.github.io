@@ -33,10 +33,6 @@ header {
     overflow: hidden;
 }
 
-header .container {
-    max-width: 90%;
-}
-
 h1#logotype {
     margin: 0
 }
@@ -168,6 +164,10 @@ h1#logotype a {
     margin: 0 auto;
     padding: 0 15px;
     max-width: 80%;
+}
+
+header .container, footer .container {
+    max-width: 90%;
 }
 
 .row {

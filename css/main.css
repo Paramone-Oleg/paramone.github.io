@@ -159,6 +159,23 @@ h1#logotype a {
     opacity: 1;
 }
 
+/*--Typography--*/
+.text-right {
+    text-align: right !important;
+}
+
+.text-left {
+    text-align: left !important;
+}
+
+.float-right {
+    float: right !important;
+}
+
+.float-left {
+    float: left !important;
+}
+
 /*--Grid system--*/
 .container {
     margin: 0 auto;

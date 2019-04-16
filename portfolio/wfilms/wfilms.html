@@ -1,67 +1,26 @@
 <div id="material">
-	
+
 	<nav class="" id="fixbutt">
 		<div class="container"><a target="_blank" href="/demo.html?theme=MODERNITY"><span>Демонстрация</span> <img src="/img/ico_demo.svg" alt="demonstration" title="demonstration"></a><a target="_blank" href="https://utemplate.pro/shop/626/desc/modernity"><span>Купить</span> <span class="pay">25$</span> <img src="/img/ico_buy.svg" alt="download" title="download"></a><a href="#features"><span>Особенности</span> <img src="/img/ico_features.svg" alt="features" title="features"></a> <a href="#" id="pclose"><span>Закрыть</span> <img src="/img/ico_close.svg" alt="close" title="close"></a></div>
 	</nav>
 	
 	<div class="container">
 		<div class="row" id="masonry">
-			<div class="col-12 item"><img src="/portfolio/modernity/1.png" alt="" title=""></div>
+			<div class="col-12 item"><img src="/portfolio/wfilms/1.png" alt="" title=""></div>
 			<div class="col-6 item">
-				<span><img src="/portfolio/wfilms/2.png" alt="" title=""></span>
+				<span><img src="/portfolio/wfilms/2.jpg" alt="" title=""></span>
 				<span><img src="/portfolio/wfilms/4.png" alt="" title=""></span>
 				<span><img src="/portfolio/wfilms/6.png" alt="" title=""></span>
-				<span><img src="/portfolio/wfilms/8.png" alt="" title=""></span>
-				<span><img src="/portfolio/wfilms/10.png" alt="" title=""></span>
-				<span><img src="/portfolio/wfilms/12.png" alt="" title=""></span>
-				<span><img src="/portfolio/wfilms/14.png" alt="" title=""></span>
-				<span><img src="/portfolio/wfilms/16.png" alt="" title=""></span>
-				<span><img src="/portfolio/wfilms/18.png" alt="" title=""></span>
 			</div>
 			<div class="col-6 item">
 				<span><img src="/portfolio/wfilms/3.png" alt="" title=""></span>
 				<span><img src="/portfolio/wfilms/5.png" alt="" title=""></span>
 				<span><img src="/portfolio/wfilms/7.png" alt="" title=""></span>
-				<span><img src="/portfolio/wfilms/9.png" alt="" title=""></span>
-				<span><img src="/portfolio/wfilms/11.png" alt="" title=""></span>
-				<span><img src="/portfolio/wfilms/13.png" alt="" title=""></span>
-				<span><img src="/portfolio/wfilms/15.png" alt="" title=""></span>
-				<span><img src="/portfolio/wfilms/17.png" alt="" title=""></span>
-				<span><img src="/portfolio/wfilms/20.png" alt="" title=""></span>
 			</div>
 		</div>
 		
-
-
-
-
-	</div>
-
-</div>
-
-<script>
-	$(document).ready(function() {
-
-		function closeContent() {
-			$('.project-content').delay(100).slideUp(1000, function() {
-				$.waypoints('refresh')
-			});
-			$('html, body').animate({
-				scrollTop: $('#homeportfolio').position().top
-			}, 600);
-		}
-		$('#pclose').click(function() {
-			closeContent();
-		});
-	});
-
-</script>
-
-		
-	
-		
-		
-	<p><strong>«WFilms - Bootstrap 4 киношаблон для uCoz»</strong> - для чего же он создан? Этот шаблон идеально подойдет тем кому надоели типичные киношаблоны , для тех кто не ставит для пользователей рамки, кто хочет красиво оформить киносайт, или сайт человека который выпускает видео продукт, видеороликов блогера, медиа студии, фотографов. С помощью минималистического, не навязчивого дизайна вы можете эффективно и привлекательно презентовать свои работы аудитории и клиентам, а юзабилити и "интуитивность" поможет пользователям и гостям сайта комфортно находится на сайте.<br>
+<p id="features"></p>
+<p><strong>«WFilms - Bootstrap 4 киношаблон для uCoz»</strong> - для чего же он создан? Этот шаблон идеально подойдет тем кому надоели типичные киношаблоны , для тех кто не ставит для пользователей рамки, кто хочет красиво оформить киносайт, или сайт человека который выпускает видео продукт, видеороликов блогера, медиа студии, фотографов. С помощью минималистического, не навязчивого дизайна вы можете эффективно и привлекательно презентовать свои работы аудитории и клиентам, а юзабилити и "интуитивность" поможет пользователям и гостям сайта комфортно находится на сайте.<br>
 Первый дизайн с Bootstrao 4 на uTemplate который ломает типичное рамки для подобных сайтов</p>
 
 <hr>
@@ -215,10 +174,28 @@
  <li>Добавлен jquery.easeScroll.</li>
  </ul>
  </li>
-</ul></div></div>
+</ul>
+
+
+	</div>
+
+</div>
+
 
 <script>
-$(document).ready(function (){
-function func(){$('.btnblock').slideToggle('slow')}setTimeout(func, 1500);
-function closeContent(){$('.project-content').delay(100).slideUp(1000,function(){$.waypoints('refresh')});$('html, body').animate({scrollTop:$('#homeportfolio').position().top },600);}$('#pclose').click(function(){closeContent();});});
-</script> 
+	$(document).ready(function() {
+
+		function closeContent() {
+			$('.project-content').delay(100).slideUp(1000, function() {
+				$.waypoints('refresh')
+			});
+			$('html, body').animate({
+				scrollTop: $('#homeportfolio').position().top
+			}, 600);
+		}
+		$('#pclose').click(function() {
+			closeContent();
+		});
+	});
+
+</script>

@@ -1,0 +1,501 @@
+*,
+::after,
+::before {
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+}
+
+html {
+	overflow: visible;
+	font-family: "Fira Sans Extra Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	-webkit-tap-highlight-color: transparent;
+}
+
+body {
+	margin: 0;
+	font-size: 22px;
+	overflow: hidden;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	display: block;
+	color: #000;
+	font-weight: 300;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul,
+p {
+	list-style: none;
+	margin: .5em 0 1em;
+	line-height: 1.6;
+	word-break: break-word;
+}
+
+ul li {
+	margin-bottom: 0;
+	padding: 0 0 10px;
+	position: relative;
+}
+
+ul li:before {
+	left: -20px;
+	width: 8px;
+	top: 14px;
+	height: 8px;
+	border-radius: 50%;
+	background-color: #00c57c;
+	position: absolute;
+	content: '';
+}
+
+
+
+/*--Header--*/
+header {
+	line-height: 64px;
+	background: #fff;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	z-index: 99;
+	border-bottom: 1px solid #999;
+	overflow: hidden;
+}
+
+h1#logotype {
+	margin: 0
+}
+
+h1#logotype a {
+	font-weight: 200;
+	text-transform: uppercase;
+	color: #000;
+	font-size: 32px;
+	letter-spacing: 10px;
+	position: relative;
+}
+
+.codered {
+	background: red;
+	color: #fff;
+	text-transform: uppercase;
+	padding: 0 1rem;
+}
+
+#menuCheck {
+	display: none;
+}
+
+.hamburger-icon {
+	cursor: pointer;
+	display: inline-block;
+	width: 60px;
+	vertical-align: middle;
+	height: 40px;
+	z-index: 13;
+	position: relative;
+	overflow: hidden;
+	position: absolute;
+	right: 15px;
+	top: 12px
+}
+
+.hamburger-icon .ico {
+	background: #000;
+	display: block;
+	height: 2px;
+	margin: 0;
+	transition: .2s all;
+}
+
+.hamburger-icon .ico:nth-child(2) {
+	margin: 16px 0 16px 15px;
+}
+
+.hamburger-icon .ico:nth-child(3) {
+	margin-left: 30px;
+}
+
+.hamburger-icon:hover .ico {
+	background: #333;
+	margin-left: 0;
+}
+
+.hamburger-icon:hover .ico:nth-child(2) {
+	margin: 16px;
+}
+
+#menuCheck:checked + .hamburger-icon .ico {
+	margin: 0 7px;
+	-webkit-transform: translate3d(0, 20px, 0) rotate(45deg);
+	-moz-transform: translate3d(0, 20px, 0) rotate(45deg);
+	-o-transform: translate3d(0, 20px, 0) rotate(45deg);
+	-ms-transform: translate3d(0, 20px, 0) rotate(45deg);
+	transform: translate3d(0, 20px, 0) rotate(45deg);
+}
+
+#menuCheck:checked + .hamburger-icon .ico:nth-child(3) {
+	margin-top: 36px;
+	-webkit-transform: translate3d(0, -20px, 0) rotate(-45deg);
+	-moz-transform: translate3d(0, -20px, 0) rotate(-45deg);
+	-o-transform: translate3d(0, -20px, 0) rotate(-45deg);
+	-ms-transform: translate3d(0, -20px, 0) rotate(-45deg);
+	transform: translate3d(0, -20px, 0) rotate(-45deg);
+}
+
+#menuCheck:checked + .hamburger-icon:hover .ico {
+	margin: 0 10px;
+}
+
+#menuCheck:checked + .hamburger-icon .ico:nth-child(2) {
+	width: 0;
+}
+
+#menuCheck:checked + .hamburger-icon:hover .ico:nth-child(3) {
+	margin-top: 36px;
+}
+
+#menuCheck:checked + .hamburger-icon + .bg {
+	cursor: pointer;
+	position: fixed;
+	z-index: 11;
+	top: 65px;
+	left: 0;
+	width: 100%;
+	height: calc(100% - 130px);
+}
+
+#menuCheck ~ nav {
+	position: fixed;
+	padding: 2em;
+	right: -100%;
+	top: 65px;
+	width: 30%;
+	max-width: 100%;
+	min-width: 300px;
+	height: calc(100% - 130px);
+	z-index: 12;
+	transition: .3s;
+	visibility: hidden;
+	opacity: 0;
+	background: #fff;
+	border-left: 1px solid #999;
+}
+#menuCheck ~ nav ul {list-style: none;margin: 0;padding: 0;overflow-y: auto;max-height: calc(100vh - 104px);text-align: center;position: relative;top: 50%;-webkit-transform: translateY(-50%);-ms-transform: translateY(-50%);transform: translateY(-50%);line-height: normal;}
+#menuCheck ~ nav ul li a {
+	text-transform: uppercase;
+	color: #333;
+	font-weight: 400;
+	position: relative;
+	opacity: .7;
+	display: inline-block;
+	width: auto;
+	font-size: 18px;
+	line-height: 42px;
+	letter-spacing: 8px;
+}
+#menuCheck ~ nav ul li{text-align: center}
+#menuCheck ~ nav ul li:before {
+	display: none
+}
+
+#menuCheck:checked ~ nav {
+	right: 0;
+	visibility: visible;
+	opacity: 1;
+}
+
+/*--Typography--*/
+.text-right {
+	text-align: right !important;
+}
+
+.text-left {
+	text-align: left !important;
+}
+
+.float-right {
+	float: right !important;
+}
+
+.float-left {
+	float: left !important;
+}
+
+/*--Grid system--*/
+.container {
+	margin: 0 auto;
+	padding: 0 15px;
+	max-width: 80%;
+}
+
+header .container,
+footer .container {
+	max-width: 90%;
+}
+
+.row {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	margin-right: -15px;
+	margin-left: -15px;
+}
+
+.row > [class*=col] {
+	position: relative;
+	width: 100%;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
+.col {
+	-ms-flex-preferred-size: 0;
+	flex-basis: 0;
+	-ms-flex-positive: 1;
+	flex-grow: 1;
+	max-width: 100%;
+}
+
+.col-auto {
+	-ms-flex: 0 0 auto;
+	flex: 0 0 auto;
+	width: auto;
+	max-width: 100%;
+}
+
+.col-3 {
+	-ms-flex: 0 0 25%;
+	flex: 0 0 25%;
+	max-width: 25%
+}
+
+.col-4 {
+	-ms-flex: 0 0 33.333333%;
+	flex: 0 0 33.333333%;
+	max-width: 33.333333%
+}
+
+.col-6 {
+	-ms-flex: 0 0 50%;
+	flex: 0 0 50%;
+	max-width: 50%
+}
+
+.col-8 {
+	-ms-flex: 0 0 66.666667%;
+	flex: 0 0 66.666667%;
+	max-width: 66.666667%
+}
+
+.col-9 {
+	-ms-flex: 0 0 75%;
+	flex: 0 0 75%;
+	max-width: 75%
+}
+
+.col-12 {
+	-ms-flex: 0 0 100%;
+	flex: 0 0 100%;
+	max-width: 100%
+}
+
+/*--Footer--*/
+footer {
+	line-height: 64px;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	background: #fff;
+	z-index: 98;
+	border-top: 1px solid #999;
+	overflow: hidden;
+}
+
+footer [class*=col] + [class*=col] {
+	border-left: 1px solid #999;
+}
+
+/*--Portfolio--*/
+
+#content {
+	position: relative;
+	width: 100%;
+	height: calc(100vh - 130px);
+	display: inline-flex;
+	overflow: hidden;
+	transition: .2s all;
+}
+
+#content.active {
+	background: rgba(255, 255, 255, 0.3);
+	cursor: grabbing;
+	cursor: -webkit-grabbing;
+}
+
+.bgwork {
+	width: 100%;
+	background-position: center left;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100%;
+	display: flex;
+	transition: .2s all;
+	border-right: 1px solid #999;
+	-ms-flex: 0 0 25%;
+	flex: 0 0 25%;
+	max-width: 25%;
+	position: relative;
+}
+
+.bgwork:before {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	top: 0;
+	height: 100%;
+	background: rgba(255, 255, 255, .7);
+	content: '';
+	z-index: 3;
+	transition: .2s all;
+}
+
+.bgwork:hover {
+	-ms-flex: 0 0 66.666667%;
+	flex: 0 0 66.666667%;
+	max-width: 66.666667%;
+}
+
+.bgwork:hover:before {
+	background: rgba(255, 255, 255, .3)
+}
+
+.bgwork:hover .bgtitle {
+	font-size: 3em;
+	font-weight: 200;
+}
+
+.bgtitle {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	font-size: 2em;
+	font-weight: 300;
+	color: #333;
+	transition: .2s all;
+	z-index: 3;
+	transform: rotate(90deg);
+}
+
+.bgtitle:first-letter {
+	color: #fff;
+	background: red;
+	padding: .5rem 0 .5rem 1rem;
+	text-transform: uppercase;
+	position: relative;
+}
+
+.project-content {
+	position: fixed;
+	top: 65px;
+	width: 100%;
+	left: 0;
+	right: 0;
+	bottom: 65px;
+	height: calc(100% - 130px);
+	background: rgba(255, 255, 255, .8);
+	z-index: 7;
+	display: none;
+	overflow-y: auto;
+}
+
+#masonry {
+	padding: 3em 0;
+}
+
+#masonry .item img {
+	width: 100%;
+	display: block;
+	box-shadow: 0 0 .5rem #ccc;
+	margin-bottom: 2rem;
+	border-radius: .25rem;
+}
+
+pre {
+	color: #00009e;
+	background: rgba(0, 0, 0, .05);
+	padding: 5px 10px;
+	border-radius: 5px;
+	display: inline-block;
+	margin: 0;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width: 100%;
+}
+
+nav#fixbutt {
+	height: 64px;
+	line-height: 64px;
+	background: #fff;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	z-index: 2;
+	border-bottom: 1px solid #999;
+}
+
+nav#fixbutt a {
+	padding: 0 15px;
+	position: relative;
+	font-size: 14px;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	bottom: 4px;
+	font-weight: 400;
+	color: #333;
+	display: inline-block;
+}
+
+nav#fixbutt a + a {
+	border-left: 1px solid #999
+}
+
+nav#fixbutt a img {
+	width: 2rem;
+	margin-left: 1rem;
+	vertical-align: middle;
+}
+
+nav#fixbutt a#pclose {
+	float: right;
+	border: 0;
+}
+
+nav#fixbutt a#pclose img {
+	width: 1.5rem;
+}
+
+.pay {
+	background: red;
+	padding: .5rem;
+	color: #fff;
+}

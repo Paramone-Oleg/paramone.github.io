@@ -496,6 +496,7 @@ nav#fixbutt a {
 	font-weight: 400;
 	color: #333;
 	display: inline-block;
+	height: 64px;
 }
 
 nav#fixbutt a + a {
@@ -511,6 +512,7 @@ nav#fixbutt a img {
 nav#fixbutt a#pclose {
 	float: right;
 	border: 0;
+	top: 0;
 }
 
 nav#fixbutt a#pclose img {

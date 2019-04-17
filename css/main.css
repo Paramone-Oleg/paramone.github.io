@@ -65,6 +65,10 @@ ul li:before {
 	content: '';
 }
 
+img,
+iframe {
+	max-width: 100%;
+}
 
 
 /*--Header--*/
@@ -198,7 +202,22 @@ h1#logotype a {
 	background: #fff;
 	border-left: 1px solid #999;
 }
-#menuCheck ~ nav ul {list-style: none;margin: 0;padding: 0;overflow-y: auto;max-height: calc(100vh - 104px);text-align: center;position: relative;top: 50%;-webkit-transform: translateY(-50%);-ms-transform: translateY(-50%);transform: translateY(-50%);line-height: normal;}
+
+#menuCheck ~ nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	overflow-y: auto;
+	max-height: calc(100vh - 104px);
+	text-align: center;
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	line-height: normal;
+}
+
 #menuCheck ~ nav ul li a {
 	text-transform: uppercase;
 	color: #333;
@@ -211,7 +230,11 @@ h1#logotype a {
 	line-height: 42px;
 	letter-spacing: 8px;
 }
-#menuCheck ~ nav ul li{text-align: center}
+
+#menuCheck ~ nav ul li {
+	text-align: center
+}
+
 #menuCheck ~ nav ul li:before {
 	display: none
 }
@@ -469,6 +492,7 @@ nav#fixbutt a {
 	font-size: 14px;
 	text-transform: uppercase;
 	letter-spacing: 5px;
+	bottom: 4px;
 	font-weight: 400;
 	color: #333;
 	display: inline-block;

@@ -528,3 +528,11 @@ nav#fixbutt a#pclose img {
 .pay.free {
     background-color: #00c57c;
 }
+
+#resume a:hover {
+    color: red;
+}
+
+#resume a {
+    color: #8f8f8f;
+}

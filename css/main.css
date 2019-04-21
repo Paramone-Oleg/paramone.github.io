@@ -529,6 +529,10 @@ nav#fixbutt a#pclose img {
     background-color: #00c57c;
 }
 
+#resume .row > [class*=col] {
+    padding: 2em 15px;
+}
+#resume img {border-radius: 1rem}
 #resume a:hover {
     color: red;
 }

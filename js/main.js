@@ -21,9 +21,9 @@ $('.ajax-portfolio-link').click(function () {
 });
 
 (function () {
-  var scrollEl = document.querySelector('body')
+  var scrollEl = document.querySelector('main')
   var scr = new ScrollBooster({
-    viewport: document.querySelector('#content'),
+    viewport: document.querySelector('section#content'),
     emulateScroll: true,
     mode: 'x',
     onUpdate: function (data) {

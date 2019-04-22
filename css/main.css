@@ -554,36 +554,11 @@ nav#fixbutt a#pclose img {
     font-size: initial;
     display: inline-block;
 }
-
 .goog-te-menu-frame {
     box-shadow: none;
-    position: fixed;
-    z-index: 11;
-    top: 65px !important;
-    left: 0 !important;
-    width: 100% !important;
-    height: calc(100% - 130px) !important;
-    background: #fff;
 }
-
-.goog-te-menu2 {
-    border: none;
-    padding: 2em;
-    width: 100% !important;
-    height: 100% !important;
-}
-
-.goog-te-combo, .goog-te-banner *, .goog-te-ftab *, .goog-te-menu *, .goog-te-menu2 *, .goog-te-balloon * {
-    font-family: "Fira Sans Extra Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    font-size: initial;
-    text-transform: uppercase;
-}
-
-.goog-te-menu2-item div, .goog-te-menu2-item:link div, .goog-te-menu2-item:visited div, .goog-te-menu2-item:active div {
-    color: #333;
-    background: transparent;
-}
-.goog-te-menu2-item:hover div {
-    background: transparent;
-    color: red;
+.goog-te-menu-frame *{
+    font-family: "Fira Sans Extra Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
+    font-size: initial !important;
+    text-transform: uppercase !important;
 }

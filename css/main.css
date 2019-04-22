@@ -562,6 +562,9 @@ nav#fixbutt a#pclose img {
 }
 .goog-te-menu2 {
     border: none;
+    padding: 2em;
+    width: 100% !important;
+    height: 100% !important;
 }
 
 .goog-te-combo, .goog-te-banner *, .goog-te-ftab *, .goog-te-menu *, .goog-te-menu2 *, .goog-te-balloon * {

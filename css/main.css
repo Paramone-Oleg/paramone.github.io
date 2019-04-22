@@ -574,3 +574,7 @@ nav#fixbutt a#pclose img {
     color: #333;
     background: transparent;
 }
+.goog-te-menu2-item:hover div {
+    background: transparent;
+    color: red;
+}

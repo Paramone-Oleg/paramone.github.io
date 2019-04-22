@@ -82,3 +82,19 @@
 		</div>
 	</div>
 </section>
+
+
+<script>
+	$(document).ready(function() {
+
+		function closeContent() {
+			$('.project-content').delay(100).slideUp(1000, function() {
+				$.waypoints('refresh')
+			});
+		}
+		$('#pclose').click(function() {
+			closeContent();
+		});
+	});
+
+</script>

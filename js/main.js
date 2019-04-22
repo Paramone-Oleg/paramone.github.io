@@ -20,25 +20,27 @@ $('.ajax-portfolio-link').click(function () {
 	return false;
 });
 
-function handle_mousedown(e){
-    window.my_dragging = {};
-    my_dragging.pageX0 = e.pageX;
-    my_dragging.pageY0 = e.pageY;
-    my_dragging.elem = this;
-    my_dragging.offset0 = $(this).offset();
-    function handle_dragging(e){
-        var left = my_dragging.offset0.left + (e.pageX - my_dragging.pageX0);
-        var top = my_dragging.offset0.top + (e.pageY - my_dragging.pageY0);
-        $(my_dragging.elem)
-        .offset({top: top, left: left});
+var x,y,top,left,down;
+
+$("#content").mousedown(function(e){
+    e.preventDefault();
+    down=true;
+    x=e.pageX;
+    y=e.pageY;
+    top=$(this).scrollTop();
+    left=$(this).scrollLeft();
+});
+
+$("main").mousemove(function(e){
+    if(down){
+        var newX=e.pageX;
+        var newY=e.pageY;
+        
+        //console.log(y+", "+newY+", "+top+", "+(top+(newY-y)));
+        
+        $("#content").scrollTop(top-newY+y);    
+        $("#content").scrollLeft(left-newX+x);    
     }
-    function handle_mouseup(e){
-        $('#content')
-        .off('mousemove', handle_dragging)
-        .off('mouseup', handle_mouseup);
-    }
-    $('#content')
-    .on('mouseup', handle_mouseup)
-    .on('mousemove', handle_dragging);
-}
-$('#content a').mousedown(handle_mousedown);
+});
+
+$("main").mouseup(function(e){down=false;});

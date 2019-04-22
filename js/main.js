@@ -33,12 +33,12 @@ function handle_mousedown(e){
         .offset({top: top, left: left});
     }
     function handle_mouseup(e){
-        $('body')
+        $('#content')
         .off('mousemove', handle_dragging)
         .off('mouseup', handle_mouseup);
     }
-    $('body')
+    $('#content')
     .on('mouseup', handle_mouseup)
     .on('mousemove', handle_dragging);
 }
-$('#content').mousedown(handle_mousedown);
+$('#content a').mousedown(handle_mousedown);

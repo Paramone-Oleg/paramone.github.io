@@ -569,3 +569,8 @@ nav#fixbutt a#pclose img {
     font-size: initial;
     text-transform: uppercase;
 }
+
+.goog-te-menu2-item div, .goog-te-menu2-item:link div, .goog-te-menu2-item:visited div, .goog-te-menu2-item:active div {
+    color: #333;
+    background: transparent;
+}

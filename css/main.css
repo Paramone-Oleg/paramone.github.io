@@ -554,3 +554,12 @@ nav#fixbutt a#pclose img {
     font-size: initial;
     display: inline-block;
 }
+
+.goog-te-menu-frame {
+    box-shadow: none;
+    border-radius: 10px;
+    border: 1px solid red;
+}
+.goog-te-menu2 {
+    border: none;
+}

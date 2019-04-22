@@ -19,3 +19,19 @@ $('.ajax-portfolio-link').click(function () {
 	}, 500);
 	return false;
 });
+
+(function () {
+  var scrollEl = document.querySelector('body')
+  var scr = new ScrollBooster({
+    viewport: document.querySelector('#content'),
+    emulateScroll: true,
+    mode: 'x',
+    onUpdate: function (data) {
+      scrollEl.style.transform = 'translate(' + -data.position.x + 'px, ' + -data.position.y + 'px)'
+    }
+  })
+  scr.setPosition({
+    x: 100
+  })
+
+})()

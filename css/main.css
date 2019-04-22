@@ -497,10 +497,16 @@ nav#fixbutt a {
 	color: #333;
 	display: inline-block;
 	height: 64px;
+	transition: .2s;
 }
 
 nav#fixbutt a + a {
 	border-left: 1px solid #999
+}
+
+nav#fixbutt a:hover,#menuCheck ~ nav ul li a:hover {
+    color: #000;
+    text-shadow: 0 0 1px #ccc;
 }
 
 nav#fixbutt a img {

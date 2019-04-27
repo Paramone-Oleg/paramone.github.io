@@ -365,7 +365,6 @@ footer [class*=col] + [class*=col] {
 	height: calc(100vh - 130px);
 	display: inline-flex;
 	overflow: hidden;
-	overflow-x: auto;
 	transition: .2s all;
 }
 

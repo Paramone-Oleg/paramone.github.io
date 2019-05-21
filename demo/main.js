@@ -4,7 +4,7 @@ $('#templates-wrapper').slideUp(100);$('body').removeClass('popup-open');$('#the
 
 
 if ( theme==undefined ){
-var ntheme=$('.owl-item:nth-child(2) > [data-slug] > .demo-link');
+var ntheme=$('.owl-item:nth-child(1) > [data-slug] > .demo-link');
 }
 else {
 var ntheme=$('[data-slug="'+theme+'"] > .demo-link'); }

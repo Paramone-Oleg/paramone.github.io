@@ -27,7 +27,6 @@
 		max-height:50vh;
 		width:auto;
 	}
-	
 	.slider .owl-prev, .carousel .owl-prev, .carousel-auto .owl-prev {
 		text-indent: -9999px;
 		position: absolute;
@@ -37,7 +36,7 @@
 		left: 0;
 		cursor: pointer;
 		height: 100%;
-		width: 50%;
+		width: 33%;
 		margin-top: 0;
 	}
 	
@@ -74,7 +73,7 @@
 		right: 0;
 		cursor: pointer;
 		height: 100%;
-		width: 50%;
+		width: 33%;
 		margin-top: 0;
 	}
 	
@@ -206,6 +205,7 @@
 	.image-link {
 		display: inline-block;
 		width: auto;
+		height:295px;
 	}
 	
 	.mfp-with-zoom .mfp-container, .mfp-with-zoom.mfp-bg {
@@ -347,6 +347,7 @@
 
 	.btmControl{
 		clear:both;
+		background: #000;
 	}
 	
 	.control .sound{
@@ -468,6 +469,8 @@
 	
 	.video-wrapper:hover .video-btns {
 		opacity:1;
+		background: rgba(0,0,0,.5);
+		border-radius: .5em;
 	}
 	
 	.volume{

@@ -1,4 +1,3 @@
-
 $(document).ready(function() {
 	
 	"use strict";
@@ -805,7 +804,7 @@ Function QuickMenu
 		$("#close-quickmenu").mouseenter(function(e) {	
 			TweenMax.to('#ball', 0.1,{transformOrigin: '15px 15px', borderWidth: '1px', scale: 1.8});
 			TweenMax.to('#ball-loader', 0.1,{borderWidth: '1px', top: 1, left: 1});
-			$( "#ball" ).addClass("close-icon").append( '<i class="fa fa-times"></i>' );
+			$( "#ball" ).addClass("close-icon").append( '<i class="icon ion-ios-close"></i>' );
 		});
 			
 		$("#close-quickmenu").mouseleave(function(e) {
@@ -1438,7 +1437,7 @@ Function Showcase Carousel
 					TweenMax.to('#ball', 0.6,{transformOrigin: '15px 15px', borderWidth: '1px', scale: 1.6});
 					TweenMax.to('#hold-event', 0.6,{scale:0});
 					var progress = $('#hold-event');
-					TweenMax.to(progress, 0.6, {force3D:true, backgroundColor : 'rgba(255, 255, 255, 1)'﻿, onComplete:function(){
+					TweenMax.to(progress, 0.6, {force3D:true, backgroundColor : 'rgba(255, 255, 255, 1)', onComplete:function(){
 						
 						
 						var dragSwiper = document.querySelector('.swiper-container').swiper;
@@ -1566,7 +1565,7 @@ Function Portfolio
 			$(".item-image").mouseenter(function(e) {	
 				TweenMax.to('#ball', 0.2,{transformOrigin: '15px 15px', borderWidth: '1px', scale: 1.8});
 				TweenMax.to('#ball-loader', 0.2,{borderWidth: '1px', top: 1, left: 1});
-				$( "#ball" ).addClass("with-icon").append( '<i class="fa fa-plus"></i>' );
+				$( "#ball" ).addClass("with-icon").append( '<i class="icon ion-ios-add"></i>' );
 				$(this).find('video').each(function() {
 					$(this).get(0).play();
 				});
@@ -1601,7 +1600,7 @@ Function Portfolio
 				TweenMax.to('#ball', 1,{width:60, height:60});
 				TweenMax.to('#hold-event', 1,{scale:0, width:56, height:56});
 				var progress = $('#hold-event');
-				TweenMax.to(progress, 1, {force3D:true, backgroundColor : 'rgba(255, 255, 255, 1)'﻿, onComplete:function(){
+				TweenMax.to(progress, 1, {force3D:true, backgroundColor : 'rgba(255, 255, 255, 1)', onComplete:function(){
 					
 					//Execute trigger click here
 					var heroheight = $("#hero").height() 
@@ -1681,7 +1680,7 @@ Function Portfolio
 			$("#close-filters").mouseenter(function(e) {	
 				TweenMax.to('#ball', 0.1,{transformOrigin: '15px 15px', borderWidth: '1px', scale: 1.8});
 				TweenMax.to('#ball-loader', 0.1,{borderWidth: '1px', top: 1, left: 1});
-				$( "#ball" ).addClass("close-icon").append( '<i class="fa fa-times"></i>' );
+				$( "#ball" ).addClass("close-icon").append( '<i class="icon ion-ios-close"></i>' );
 			});
 				
 			$("#close-filters").mouseleave(function(e) {
@@ -1773,7 +1772,7 @@ Function Sliders
 		$(".owl-prev").mouseenter(function(e) {	
 			TweenMax.to('#ball', 0.1,{transformOrigin: '15px 15px', borderWidth: '1px', scale: 2});
 			TweenMax.to('#ball-loader', 0.1,{borderWidth: '1px', top: 1, left: 1});
-			$( "#ball" ).addClass("with-icon").append( '<i class="fa fa-chevron-left"></i>' );
+			$( "#ball" ).addClass("with-icon").append( '<i class="icon ion-ios-arrow-back"></i>' );
 		});
 			
 		$(".owl-prev").mouseleave(function(e) {
@@ -1786,7 +1785,7 @@ Function Sliders
 		$(".owl-next").mouseenter(function(e) {	
 			TweenMax.to('#ball', 0.1,{transformOrigin: '15px 15px', borderWidth: '1px', scale: 2});
 			TweenMax.to('#ball-loader', 0.1,{borderWidth: '1px', top: 1, left: 1});
-			$( "#ball" ).addClass("with-icon").append( '<i class="fa fa-chevron-right"></i>' );
+			$( "#ball" ).addClass("with-icon").append( '<i class="icon ion-ios-arrow-forward"></i>' );
 		});
 			
 		$(".owl-next").mouseleave(function(e) {
@@ -1806,7 +1805,7 @@ Function Sliders
 				autoHeight:true,
 				autoplayHoverPause:true,
 				nav:true,
-				navText: ["<div class='prev-testimonial parallax-element'><i class='fa fa-chevron-left' aria-hidden='true'></i></div>","<div class='next-testimonial parallax-element'><i class='fa fa-chevron-right' aria-hidden='true'></i></div>"],
+				navText: ["<div class='prev-testimonial parallax-element'><i class='icon ion-ios-arrow-back' aria-hidden='true'></i></div>","<div class='next-testimonial parallax-element'><i class='icon ion-ios-arrow-forward' aria-hidden='true'></i></div>"],
 			});
 		}
 		
@@ -1858,7 +1857,7 @@ Function Lightbox
 		$(".image-link").mouseenter(function(e) {	
 			TweenMax.to('#ball', 0.1,{transformOrigin: '15px 15px', borderWidth: '1px', scale: 1.8});
 			TweenMax.to('#ball-loader', 0.1,{borderWidth: '1px', top: 1, left: 1});
-			$( "#ball" ).addClass("with-icon").append( '<i class="fa fa-plus"></i>' );
+			$( "#ball" ).addClass("with-icon").append( '<i class="icon ion-ios-add"></i>' );
 		});
 			
 		$(".image-link").mouseleave(function(e) {
@@ -1922,7 +1921,7 @@ Function Page PlayVideo
 					$( "#ball" ).addClass("pause-movie")		
 				}
 				TweenMax.to('#ball', 0.1,{transformOrigin: '15px 15px', borderWidth: '1px', scale: 2});
-				$( "#ball" ).addClass("over-movie").append( '<i class="fa fa-play"></i><i class="fa fa-pause"></i>' );
+				$( "#ball" ).addClass("over-movie").append( '<i class="icon ion-ios-play"></i><i class="icon ion-ios-pause"></i>' );
 			});
 			
 			$(".video-wrapper").mouseleave(function(e) {
@@ -2183,16 +2182,15 @@ Function Contact Map
 	function ContactMap() {	
 	
 		if( jQuery('#map_canvas').length > 0 ){					
-			var latlng = new google.maps.LatLng(43.270441,6.640888);
+			var latlng = new google.maps.LatLng(48.4388219,35.0477645);
 			var settings = {
-				zoom: 14,
-				center: new google.maps.LatLng(43.270441,6.640888),
-				mapTypeControl: false,
-				scrollwheel: false,
-				draggable: true,
-				panControl:false,
-				scaleControl: false,
-				zoomControl: false,
+		zoom: 13,
+		center: new google.maps.LatLng(48.4388219,35.0477645),
+		mapTypeId: google.maps.MapTypeId.ROADMAP,
+		mapTypeControl: false,
+		panControl: false,
+		zoomControl: false,
+		scaleControl: false,
 				streetViewControl:false,
 				navigationControl: false};			
 				var newstyle = [
@@ -2390,12 +2388,12 @@ Function Contact Map
 			var infowindow = new google.maps.InfoWindow({
 				content: contentString
 			});	
-			var companyImage = new google.maps.MarkerImage('images/marker.png',
+			var companyImage = new google.maps.MarkerImage('/images/marker.png',
 				new google.maps.Size(58,63),<!-- Width and height of the marker -->
 				new google.maps.Point(0,0),
 				new google.maps.Point(35,20)<!-- Position of the marker -->
 			);
-			var companyPos = new google.maps.LatLng(43.270441,6.640888);	
+			var companyPos = new google.maps.LatLng(48.4388219,35.0477645);	
 			var companyMarker = new google.maps.Marker({
 				position: companyPos,
 				map: map,

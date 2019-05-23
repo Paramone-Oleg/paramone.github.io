@@ -2582,7 +2582,7 @@ footer .socials-wrap {
 	line-height: 30px;
 	margin: 25px 0;
 	overflow: hidden;
-	width: 50px;
+	width: 60px;
 	color: #000;
 }
 
@@ -2605,7 +2605,7 @@ footer .socials-wrap {
 	display: inline-block;
 	-webkit-transition: -webkit-transform 0.2s;
 	transition: transform 0.2s;
-	width: 50px;
+	width: 60px;
 	text-align: center;
 	transform-origin: 100% 0%;
 }
@@ -2620,7 +2620,7 @@ footer .socials-wrap {
 
 .button-text span::before {
 	position: absolute;
-	width: 140px;
+	width: 60px;
 	top: 100%;
 	left: 0;
 	content: attr(data-hover);

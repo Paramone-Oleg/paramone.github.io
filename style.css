@@ -2590,7 +2590,7 @@ footer .socials-wrap {
 	line-height: 30px;
 	margin: 25px 0;
 	overflow: hidden;
-	width: 140px;
+	width: 50px;
 	color: #000;
 }
 
@@ -2613,7 +2613,7 @@ footer .socials-wrap {
 	display: inline-block;
 	-webkit-transition: -webkit-transform 0.2s;
 	transition: transform 0.2s;
-	width: 140px;
+	width: 50px;
 	text-align: center;
 	transform-origin: 100% 0%;
 }

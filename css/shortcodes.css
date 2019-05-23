@@ -201,7 +201,9 @@
 /*--------------------------------------------------
 	Light Box
 ---------------------------------------------------*/	
-
+.carousel .image-link {
+    height: 290px;
+}
 	.image-link {
 		display: inline-block;
 		width: auto;

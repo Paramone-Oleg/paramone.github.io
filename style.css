@@ -3451,7 +3451,11 @@ nav.open {
 		display: none;
 	}
 }
-
+@media only screen and (max-width:340px) {
+	#logo{left:5px}
+#logo a{margin-left:0}
+.button-wrap.right.menu {right:-25px}
+}
 @media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : landscape) {
 
 	#rotate-device {

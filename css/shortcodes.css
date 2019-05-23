@@ -725,6 +725,8 @@
 		position:relative;
 		margin-bottom:0px;
 		font-size:24px;
+		margin-right: 10px;
+		vertical-align: middle;
 	}
 	
 	.light-content .clapat-icon {

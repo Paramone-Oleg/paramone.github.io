@@ -5,6 +5,11 @@ a{-webkit-transition:all 400ms;-moz-transition:all 400ms;-o-transition:all 400ms
     [class*=col], #header>.container,#theme-selector {
     padding: 0 7px;
 }
+#header a#logo {
+    font-size: 20px;
+    margin-right: 0;
+    padding-left: 10px;
+}
 .theme-name {
     overflow: hidden;
     text-overflow: ellipsis;

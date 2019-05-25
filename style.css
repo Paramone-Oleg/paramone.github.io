@@ -4687,13 +4687,13 @@ nav.open {
 
 	#rotate-device {
 		display: block;
+}
 
 @media only screen and (max-width: 479px) {
 
 	.clapat-button {
     	margin-bottom: 20px;
 	}
-}
 
 	.text-carousel {
     	max-width: 280px;
@@ -4704,4 +4704,3 @@ nav.open {
 	}
 
 }			
-

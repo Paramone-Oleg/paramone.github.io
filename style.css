@@ -166,7 +166,7 @@ i {
 
 mark,
 ins {
-	background: none repeat scroll 0 0 red;
+	background: red;
 	text-decoration: none;
 	color: #fff;
 	padding: 0px 10px;

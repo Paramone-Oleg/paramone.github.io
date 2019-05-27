@@ -514,6 +514,17 @@ Function First Load
 			}
 		});
 		
+		$('.contact-link').on('click', function() {	
+			var acc = $("#main-page-content").height();			
+			if ($("body").hasClass("smooth-scroll")) {
+				TweenLite.to(scrollbar, 1.5, {scrollTop:acc, ease:Power4.easeInOut});
+			} else {
+				TweenLite.to(window, 1.5, {scrollTop:acc, ease:Power4.easeInOut});
+			}
+		});
+		
+		
+		
 		
 		// Tilt Showcase Wrapper
 		if( $('#hero').hasClass("has-image")) {				

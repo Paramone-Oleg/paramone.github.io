@@ -1173,7 +1173,7 @@ input[type="search"] {
 	height: 2px;
 	left: 0;
 	position: absolute;
-	top: calc(100% - 60px);
+	top: 100%;
 	width: 0;
 	-webkit-transition: all 0.2s ease-in-out;
 	-moz-transition: all 0.2s ease-in-out;
@@ -1194,9 +1194,7 @@ input[type="search"] {
 	transition: all 0.4s ease-in-out;
 }
 
-input[type="text"]:focus + .input_label,
-input[type="search"]:focus + .input_label,
-textarea:focus + .input_label {
+input[type="text"]:focus + .input_label, input[type="search"]:focus + .input_label, textarea:focus + .input_label, input[type="email"]:focus + .input_label {
 	width: 100%;
 }
 

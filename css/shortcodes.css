@@ -913,6 +913,7 @@ a.link:hover::before {
 	margin-top: -65px;
 	padding-left: 30%;
 	padding-right: 80px;
+	position: relative;
 }
 
 .accordion {
@@ -1027,7 +1028,7 @@ mark s {
 }
 
 .sticky-price {
-	padding: 2em 0;
+	padding: 1em;
 	border: 1px solid #333;
 	text-align: center;
 }
@@ -1041,7 +1042,7 @@ mark s {
 .price-block {
 	position: absolute;
 	left: 0;
-	top: 8em;
+	top: 6em;
 	width: 25%;
 }
 
@@ -1181,6 +1182,9 @@ input[type="search"] {
 	-ms-transition: all 0.2s ease-in-out;
 	transition: all 0.2s ease-in-out;
 }
+textarea + .input_label {
+	top: calc(100% - 60px);
+}
 
 .light-content .input_label {
 	background-color: #fff;
@@ -1195,12 +1199,12 @@ input[type="search"] {
 }
 
 input[type="text"]:focus + .input_label, input[type="search"]:focus + .input_label, textarea:focus + .input_label, input[type="email"]:focus + .input_label {
-	width: 100%;
+	width:100%
 }
 
-input[type="text"]:focus,
+input[type="text"]:focus, 
 textarea:focus {
-	color: #000;
+	color:#000
 }
 
 .light-content input[type="text"]:focus,
@@ -1424,6 +1428,12 @@ input[type="submit"] {
 
 
 @media only screen and (max-width: 767px) {
+	.icon-large {
+	display: block;
+	width: 35%;
+	font-size: 4em;
+	text-align: left;
+}
 	.clients-table.usl li {
 		width: 50%;
 		filter: none;

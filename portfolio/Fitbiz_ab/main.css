@@ -1,0 +1,60 @@
+*{transition: .2s all}
+body {
+	background-color: #141414;
+	font-family: 'Oswald', sans-serif;
+	color: #999;
+}
+
+nav,
+footer {
+	background-color: #141414
+}
+
+main {
+	margin: 5em 0;
+}
+
+.navbar-brand {
+	font-weight: 700;
+	margin-bottom: 0px;
+	vertical-align: top;
+	width: auto;
+	font-size: 72px;
+	color: #999 !important
+}
+
+.navbar-brand:hover,.titleblock:hover,.content:hover {
+	opacity: .9
+}
+
+.navbar-dark .navbar-toggler {
+	color: #999;
+	border-color: transparent;
+}
+
+.navbar-nav .nav-link {
+	font-size: 32px;
+}
+
+.block {
+	background: #222;
+	border-radius: 8px;
+	color: #222;
+	margin-bottom: 30px;
+	padding: 30px;
+}
+.titleblock {
+	background: #999;
+	display: block;
+	color: #999;
+	border-radius: 8px;
+	margin-bottom: 30px;
+}
+
+.content {
+	background: #999;
+	display: block;
+	border-radius: 8px;
+	height: 8em;
+	position: relative;
+}

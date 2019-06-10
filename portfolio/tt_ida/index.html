@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Test task - IDA</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="author" content="Paramone › Веб студия">
+	<meta charset="UTF-8" />
+	<link href="./css/main.css" rel="stylesheet" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+</head>
+
+<body>
+
+	<!-- navigation -->
+	<nav id="header">
+		<div class="container">
+			<div class="rows">
+				<div class="logo">
+					<a id="logo" href="#home">Company</a>
+				</div>
+				<div class="phone">
+					<a href="tel:+380 97 977 97 97">+380 97 977 97 97</a>
+				</div>
+				<div class="menu">
+					<ul class="links">
+						<li><a class="active" href="#home">Главная</a></li>
+						<li><a href="#answer">Отзывы</a></li>
+						<li><a href="#contact">Контакты</a></li>
+						<li><a href="#">Пункт меню 1</a></li>
+						<li><a href="#">Пункт меню 2</a></li>
+					</ul>
+					<a id="burger"><i></i><i></i><i></i></a>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<!-- /navigation -->
+
+	<!-- home section -->
+	<section id="home">
+		<button id="sound">
+
+			<svg id="muted" width="54" height="46" viewBox="0 0 54 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M46.414 22.002L53.707 14.709C54.098 14.318 54.098 13.686 53.707 13.295C53.316 12.904 52.684 12.904 52.293 13.295L45 20.588L37.707 13.295C37.316 12.904 36.684 12.904 36.293 13.295C35.902 13.686 35.902 14.318 36.293 14.709L43.586 22.002L36.293 29.295C35.902 29.686 35.902 30.318 36.293 30.709C36.488 30.904 36.744 31.002 37 31.002C37.256 31.002 37.512 30.904 37.707 30.709L45 23.416L52.293 30.709C52.488 30.904 52.744 31.002 53 31.002C53.256 31.002 53.512 30.904 53.707 30.709C54.098 30.318 54.098 29.686 53.707 29.295L46.414 22.002Z" fill="white" />
+				<path d="M28.404 0.402069C27.429 -0.149931 26.273 -0.131931 25.314 0.446069C25.268 0.473069 25.224 0.505069 25.184 0.539069L11.634 12.0021H1C0.447 12.0021 0 12.4491 0 13.0021V32.0021C0 32.2681 0.105 32.5221 0.293 32.7091C0.481 32.8961 0.734 33.0021 1 33.0021L11.61 32.9971L25.153 45.4371C25.203 45.4831 25.257 45.5231 25.314 45.5571C25.806 45.8541 26.351 46.0031 26.896 46.0031C27.413 46.0021 27.929 45.8691 28.404 45.6011C29.403 45.0371 30 44.0071 30 42.8461V3.15807C30 1.99707 29.403 0.967069 28.404 0.402069ZM28 42.8461C28 43.2771 27.783 43.6561 27.421 43.8611C27.266 43.9481 26.873 44.1161 26.421 43.8871L13 31.5581V27.0021C13 26.4491 12.553 26.0021 12 26.0021C11.447 26.0021 11 26.4491 11 27.0021V30.9981L2 31.0021V14.0021H11V18.0021C11 18.5551 11.447 19.0021 12 19.0021C12.553 19.0021 13 18.5551 13 18.0021V13.4661L26.405 2.12607C26.865 1.88407 27.265 2.05607 27.421 2.14407C27.783 2.34907 28 2.72707 28 3.15807V42.8461Z" fill="white" />
+			</svg>
+
+			<svg id="unmuted" width="53" height="46" viewBox="0 0 53 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M28.404 0.402069C27.428 -0.149931 26.273 -0.131931 25.314 0.446069C25.268 0.473069 25.224 0.505069 25.184 0.539069L11.634 12.0021H1C0.447 12.0021 0 12.4491 0 13.0021V32.0021C0 32.2681 0.105 32.5221 0.293 32.7091C0.481 32.8961 0.734 33.0021 1 33.0021L11.61 32.9971L25.153 45.4371C25.203 45.4831 25.257 45.5231 25.314 45.5571C25.806 45.8541 26.351 46.0031 26.896 46.0031C27.413 46.0021 27.929 45.8691 28.404 45.6011C29.403 45.0371 30 44.0071 30 42.8461V3.15807C30 1.99707 29.403 0.967069 28.404 0.402069ZM28 42.8461C28 43.2771 27.783 43.6561 27.421 43.8611C27.266 43.9481 26.873 44.1161 26.421 43.8871L13 31.5581V27.0021C13 26.4491 12.553 26.0021 12 26.0021C11.447 26.0021 11 26.4491 11 27.0021V30.9981L2 31.0021V14.0021H11V18.0021C11 18.5551 11.447 19.0021 12 19.0021C12.553 19.0021 13 18.5551 13 18.0021V13.4661L26.405 2.12607C26.866 1.88407 27.265 2.05607 27.421 2.14407C27.783 2.34907 28 2.72807 28 3.15807V42.8461Z" fill="white" />
+				<path d="M38.797 4.05504C38.274 3.87804 37.706 4.15804 37.528 4.68104C37.351 5.20304 37.631 5.77204 38.154 5.95004C45.255 8.36104 50.026 15.013 50.026 22.503C50.026 29.986 45.264 36.639 38.177 39.057C37.655 39.235 37.375 39.803 37.554 40.327C37.696 40.742 38.084 41.004 38.5 41.004C38.607 41.004 38.716 40.987 38.823 40.95C46.719 38.257 52.025 30.844 52.025 22.504C52.026 14.155 46.71 6.74204 38.797 4.05504Z" fill="white" />
+				<path d="M43.026 22.502C43.026 16.53 39.017 11.2 33.277 9.53999C32.744 9.38899 32.193 9.69199 32.039 10.224C31.886 10.754 32.191 11.309 32.723 11.462C37.612 12.875 41.027 17.415 41.027 22.502C41.027 27.589 37.612 32.129 32.723 33.542C32.192 33.695 31.886 34.25 32.039 34.78C32.166 35.218 32.565 35.503 33 35.503C33.092 35.503 33.185 35.49 33.277 35.464C39.018 33.804 43.026 28.474 43.026 22.502Z" fill="white" />
+			</svg>
+
+		</button>
+		<div id="video-bg">
+			<video width="100%" height="auto" preload="auto" autoplay="autoplay" loop="loop" poster="./img/poster.png" muted>
+				<source src="./img/videoplayback.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+				Элемент video не поддерживается вашим браузером.
+			</video>
+		</div>
+		<h1 class="title">Заголовок</h1>
+		<p>Рыбным текстом называется текст, служащий для временного наполнения макета в публикациях или производстве веб-сайтов.</p>
+	</section>
+	<!-- /home section -->
+
+	<!-- answer section -->
+	<section id="answer">
+		<div class="container">
+			<h2 class="title">Отзывы</h2>
+
+			<div id="comment" class="owl-carousel owl-theme">
+
+				<div class="item">
+					<div>
+						<img src="./img/1.png" alt="">
+
+						<h4>Имя</h4>
+						<div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</div>
+					</div>
+				</div>
+
+				<div class="item">
+					<div>
+
+						<img src="./img/2.png" alt="">
+						<h4>Иван Иванов</h4>
+
+						<div class="text hidden">Свершилось! Посетив День открытых дверей могу с уверенностью сказать, что для меня это единственный садик надлежащего уровня у нас в городе, да ещё и в экологически чистом районе. Подход к детям, методика обучения, питание и форма времяпровождения моего ребёнка полностью удовлетворяют мои требования. <br><br>
+							Свершилось! Посетив День открытых дверей могу с уверенностью сказать, что для меня это единственный садик надлежащего уровня у нас в городе.</div>
+
+					</div>
+				</div>
+
+
+				<div class="item">
+					<div>
+						<img src="./img/3.png" alt="">
+
+						<h4>Имя</h4>
+						<div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+	<!-- /answer section -->
+
+	<!-- contact section -->
+	<section id="contact">
+		<div class="container">
+			<div class="form_block">
+				<div class="form">
+					<h4 class="title">Хочешь работать с нами?</h4>
+					<form>
+						<div class="form_item">
+							<label for="name">Имя</label>
+							<input type="email" id="name" placeholder="Введите имя*">
+						</div>
+						<div class="form_item">
+							<label for="phone">Номер телефона</label>
+							<input type="tel" id="phone" placeholder="Введите номер*">
+						</div>
+						<div class="form_item">
+							<label for="email">Почта</label>
+							<input type="email" id="email" placeholder="Введите e-mail*">
+						</div>
+						<div class="form_item">
+							<label for="message">Сообщение</label>
+							<textarea type="text" id="message" placeholder="Текст"></textarea>
+						</div>
+						<a type="sumbit" id="sumbit">Отправить</a>
+					</form>
+				</div>
+				<div class="bg"></div>
+			</div>
+		</div>
+	</section>
+	<!-- /contact section -->
+
+	<!-- footer -->
+	<footer>
+		<div class="container">
+			<div class="rows">
+				<div><span class="time">©COMPANY 2018</span></div>
+				<div class="text-center social">
+
+					<a href="https://www.facebook.com/ideadigitalagency/" target="_blank"><svg width="16" height="31" viewBox="0 0 16 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M14.8201 0.00640846L11.1263 0C6.97651 0 4.29472 2.97513 4.29472 7.57992V11.0748H0.580808C0.259882 11.0748 0 11.3561 0 11.7031V16.7668C0 17.1138 0.260178 17.3948 0.580808 17.3948H4.29472V30.172C4.29472 30.519 4.5546 30.8 4.87553 30.8H9.72112C10.042 30.8 10.3019 30.5187 10.3019 30.172V17.3948H14.6444C14.9653 17.3948 15.2252 17.1138 15.2252 16.7668L15.2269 11.7031C15.2269 11.5365 15.1656 11.3769 15.0568 11.259C14.9481 11.1411 14.7999 11.0748 14.6458 11.0748H10.3019V8.11214C10.3019 6.68818 10.6157 5.96531 12.3312 5.96531L14.8195 5.96435C15.1401 5.96435 15.4 5.68302 15.4 5.33632V0.634437C15.4 0.28806 15.1404 0.0070493 14.8201 0.00640846Z" fill="#BCBCBC" />
+						</svg></a>
+
+					<a href="https://www.instagram.com/ideadigitalagency/" target="_blank">
+						<svg width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M25.228 0.540009H3.05203C1.52743 0.540009 0.280029 1.78741 0.280029 3.31201V25.488C0.280029 27.0126 1.52743 28.26 3.05203 28.26H25.228C26.7526 28.26 28 27.0126 28 25.488V3.31201C28 1.78741 26.7526 0.540009 25.228 0.540009ZM14.14 8.85601C17.1892 8.85601 19.684 11.3508 19.684 14.4C19.684 17.4492 17.1892 19.944 14.14 19.944C11.0908 19.944 8.59603 17.4492 8.59603 14.4C8.59603 11.3508 11.0908 8.85601 14.14 8.85601ZM3.74503 25.488C3.32923 25.488 3.05203 25.2108 3.05203 24.795V13.014H5.96263C5.82403 13.4298 5.82403 13.9842 5.82403 14.4C5.82403 18.9738 9.56623 22.716 14.14 22.716C18.7138 22.716 22.456 18.9738 22.456 14.4C22.456 13.9842 22.456 13.4298 22.3174 13.014H25.228V24.795C25.228 25.2108 24.9508 25.488 24.535 25.488H3.74503ZM25.228 6.77701C25.228 7.19281 24.9508 7.47001 24.535 7.47001H21.763C21.3472 7.47001 21.07 7.19281 21.07 6.77701V4.00501C21.07 3.58921 21.3472 3.31201 21.763 3.31201H24.535C24.9508 3.31201 25.228 3.58921 25.228 4.00501V6.77701Z" fill="#BCBCBC" />
+						</svg>
+
+					</a>
+
+
+				</div>
+				<div class="text-right corp"><span>Made by:</span> <a href="">IDEADIGITAL.Agency</a></div>
+			</div>
+		</div>
+	</footer>
+	<!-- /footer -->
+
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+	<script src="./js/main.js"></script>
+</body></html>

@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" rel="stylesheet">
+    <title>Start</title>
+    <style>
+        a {
+            color: #1E0A3C;
+        }
+
+        a:hover {
+            color: #2B0E56;
+        }
+
+        .btn-primary {
+            background-color: #1E0A3C;
+            border-color: #1E0A3C;
+        }
+
+        .btn-primary:hover {
+            background-color: #2B0E56;
+            border-color: #2B0E56;
+        }
+    </style>
+</head>
+
+
+<body>
+<div class="container vh-100 d-flex align-items-start flex-column">
+    <div class="mb-auto"></div>
+    <div class="mb-auto">
+        <img class="mb-4" height="50" src="https://ffusx.stripocdn.email/content/guids/CABINET_3bbe8ac2d0e0c017f853d4737dad4e61/images/99591572967302735.png" alt="Eventbrite">
+        <h1>Welcome to Smart-Eventbrite project</h1>
+        <p>Please take a look carefully at this manual on how to use the
+            Eventbrite brand assets
+            in your
+            marketing</p>
+        <a class="btn btn-primary" href="#introduction">Start →</a>
+    </div>
+    <div class="pt-4">
+        <p class="small text-black-50">Questions or suggestions?<br>
+            Contact Eventbrite via <a
+                    href="mailto:"></a>
+            <span text=" or "/>
+            <span></span>.<br>
+            
+                    <a
+
+                            href="https://www.eventbrite.com/"
+                            target="_blank"
+                    >https://www.eventbrite.com/</a>.
+            
+        </p>
+    </div>
+</div>
+<span id="introduction"></span>
+<div class="container vh-100 pt-4">
+    <div class="row">
+        <div class="col-sm-12">
+            <h1>Introduction</h1>
+            <p>This guide provides a general description of using brand assets and showcasing
+                Smart-Eventbrite content.
+                Please read this document carefully to get insights of every element presented in this project.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <h2>File structure</h2>
+            <code>
+					<pre>
+├── Assets
+│   ├── company-logo.ai
+│   ├── description.docx
+│   ├── montserrat.ttf
+│   └── template-design.psd
+├── Modules
+│   ├── Module-1
+│   │   ├── images
+│   │   ├── module-1.png
+│   │   ├── module-inlined-css.html
+│   │   ├── module.css
+│   │   └── module.html
+│   └── Modules.html
+├── Templates
+│   └── Template-1
+│       ├── Tests
+│       ├── images
+│       ├── Template.pdf
+│       ├── local-images-and-inlined-css.html
+│       ├── local-images-and-local-css.css
+│       ├── local-images-and-local-css.html
+│       └── local-images-and-inlined-css-minified.html
+├── Guideline.pdf
+└── Start.html
+					</pre>
+            </code>
+            <a class="btn btn-primary" href="#definitions">More about files →</a>
+        </div>
+    </div>
+</div>
+<span id="definitions"></span>
+<div class="container vh-100">
+    <div class="row">
+        <div class="col-sm-12">
+            <h1>Definitions</h1>
+            <p>The <strong>Brand Guideline</strong> document provides readers with instructions on how to properly apply
+                the brand design to the email templates and modules presented here.</p>
+            <p>
+                The <strong>Modules</strong> folder includes all necessary files related to every existing module.
+                Inside that folder, you will find:
+            <ul>
+                <li>a couple of different subfolders (one folder for each module) with the names of your modules. Inside
+                    every subfolder, you will see:
+                    <ul>
+                        <li>the <strong>thumbnails</strong> of the module for desktop and mobile layouts,</li>
+                        <li><strong>module.html</strong> file that includes the raw HTML code without the inline CSS
+                            styles,
+                        </li>
+                        <li><strong>module.css</strong> file that includes the CSS styles that may be applied to a
+                            particular module,
+                        </li>
+                        <li><strong>module-inlined-css.html</strong> file which represents the HTML code with the inline
+                            CSS styles. You can insert this code into a necessary place when working on your email
+                            template design,
+                        </li>
+                        <li>used images in the individual <strong>images</strong> folder.</li>
+                    </ul>
+                </li>
+                <li>the <strong>modules.html</strong> file, which describes every module, that you have in every
+                    subfolder above, in the details. This file is generated for convenient navigation through all
+                    existing modules in this project.
+                </li>
+            </ul>
+            </p>
+            <p>
+                In the <strong>Assets</strong> folder, you may find the source files used for creating templates and
+                modules.
+            </p>
+            <p>The <strong>Templates</strong> folder includes all necessary files related to every existing email
+                template. Inside that folder, you will find as many subfolders as many templates you’ve got. Each
+                subfolder includes:
+            <ul>
+                <li>the <strong>PDF</strong> file of email templates,</li>
+                <li>the images folder with all images used in email template code,</li>
+                <li><strong>local-images-and-local-css.html</strong> file that includes the raw HTML code of email
+                    template and the images linked to the images folder. This file doesn’t include the inline CSS
+                    styles,
+                </li>
+                <li><strong>local-images-and-local-css.css</strong> that includes the CSS styles that may be applied to
+                    a particular email template,
+                </li>
+                <li><strong>local-images-and-inlined-css.html</strong> file that represents the HTML code of entire
+                    email template along with the inline CSS styles and the images linked to the images folder.
+                </li>
+                <li>the <strong>tests</strong> folder that includes the thumbnail images, recorded by EmailOnAcid while
+                    testing this email template across different email clients. The name of each thumbnail refers to the
+                    name of a tested email client (e.g., “outlook2016mac.jpg” represents the email testing on MS Outlook
+                    2016 application on Mac machine)
+                </li>
+            </ul>
+            </p>
+        </div>
+        <a class="btn btn-primary mb-4" href="Modules/Modules.html">Go to Modules →</a>
+    </div>
+</div>
+<script crossorigin="anonymous" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script crossorigin="anonymous" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>

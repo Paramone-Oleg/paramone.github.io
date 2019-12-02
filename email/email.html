@@ -22,6 +22,19 @@ getAuthToken: function(callback) {
   error: error => callback(null)
    });
 }	
+POST: /api/v1/auth
+Host: https://plugins.stripo.email
+Content-Type: application/json
+Accept: application/json
+Body: {
+	pluginId:48b69bfb2ef64ea6858bd2c5bbac8daa,
+	secretKey:d2bee07a76b54bdf94581d366756ef38,
+	role:ADMIN
+}
+Response: {
+	token:YOUR_AUTH_TOKEN
+}
+
 </script>
 </body>
 </html>

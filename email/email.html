@@ -11,5 +11,17 @@
 <div id="stripoSettingsContainer"></div>
 <div id="stripoPreviewContainer"></div>
 <script type="text/javascript" src="https://plugins.stripo.email/static/latest/stripo.js"></script>
+<script>
+getAuthToken: function(callback) {
+   $.ajax({
+  type: 'GET',
+  url: '/backend/plugin/token',
+  contentType: 'application/json; charset=utf-8',
+  dataType: 'json',
+  success: data => callback(data.token),
+  error: error => callback(null)
+   });
+}	
+</script>
 </body>
 </html>

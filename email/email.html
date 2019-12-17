@@ -4,37 +4,138 @@
 	<title>Future › Paramone › Веб студия</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta name="author" content="Paramone › Веб студия">
-	<meta charset="UTF-8" />
 	<meta name="referrer" content="always">
 	<meta itemprop="brand" content="Paramone for uCoz">
+    <meta charset="UTF-8">
+    <style>
+        #externalSystemContainer {
+            background-color: darkgrey;
+            padding: 5px 0 5px 20px;
+        }
+        #undoButton, #redoButton {
+            display: none;
+        }
+        #stripoSettingsContainer {
+            width: 400px;
+            float: left;
+        }
+        #stripoPreviewContainer {
+            width: calc(100% - 400px);
+            float: left;
+        }
+        .notification-zone {
+            position: fixed;
+            width: 400px;
+            z-index: 99999;
+            right: 20px;
+            bottom: 80px;
+        }
+        .control-button {
+            border-radius: 17px;
+            padding: 5px 10px;
+            border-color: grey;
+        }
+        #changeHistoryLink {
+            cursor: pointer;
+        }
+    </style>
 </head>
-<div id="stripoSettingsContainer"></div>
-<div id="stripoPreviewContainer"></div>
-<script type="text/javascript" src="https://plugins.stripo.email/static/latest/stripo.js"></script>
-<script>
-getAuthToken: function(callback) {
-   $.ajax({
-  type: 'GET',
-  url: '/backend/plugin/token',
-  contentType: 'application/json; charset=utf-8',
-  dataType: 'json',
-  success: data => callback(data.token),
-  error: error => callback(null)
-   });
-}	
-POST: /api/v1/auth
-Host: https://plugins.stripo.email
-Content-Type: application/json
-Accept: application/json
-Body: {
-	pluginId: '48b69bfb2ef64ea6858bd2c5bbac8daa',
-	secretKey: 'd2bee07a76b54bdf94581d366756ef38',
-	role: 'ADMIN'
-}
-Response: {
-	token:YOUR_AUTH_TOKEN
-}
+<body>
+    <div id="externalSystemContainer">
+        <!--This is external system container where you can place plugin buttons -->
+        <button id="undoButton" class="control-button">Undo</button>
+        <button id="redoButton" class="control-button">Redo</button>
+        <button id="codeEditor" class="control-button">Code editor</button>
+        <span id="changeHistoryContainer" style="display: none;">Last change: <a id="changeHistoryLink"></a></span>
+    </div>
+    <div class="notification-zone"></div>
+    <div>
+        <!--Plugin containers -->
+        <div id="stripoSettingsContainer">Loading...</div>
+        <div id="stripoPreviewContainer"></div>
+    </div>
 
-</script>
+    <script type="application/javascript" src="notifications.js"></script>
+    <script>
+        // Utility methods
+        function request(method, url, data, callback) {
+            var req = new XMLHttpRequest();
+            req.onreadystatechange = function () {
+                if (req.readyState === 4 && req.status === 200) {
+                    callback(req.responseText);
+                } else if (req.readyState === 4 && req.status !== 200) {
+                    console.error('Can not complete request. Please check you entered a valid PLUGIN_ID and SECRET_KEY values');
+                }
+            };
+            req.open(method, url, true);
+            if (method !== 'GET') {
+                req.setRequestHeader('content-type', 'application/json');
+            }
+            req.send(data);
+        }
+        function loadDemoTemplate(callback) {
+            request('GET', 'https://raw.githubusercontent.com/ardas/stripo-plugin/master/Public-Templates/Basic-Templates/Trigger%20newsletter%20mockup/Trigger%20newsletter%20mockup.html', null, function(html) {
+                request('GET', 'https://raw.githubusercontent.com/ardas/stripo-plugin/master/Public-Templates/Basic-Templates/Trigger%20newsletter%20mockup/Trigger%20newsletter%20mockup.css', null, function(css) {
+                    callback({html: html, css: css});
+                });
+            });
+        }
+    </script>
+
+    <script>
+        // Call this function to start plugin.
+        // For security reasons it is STRONGLY recommended NOT to store your PLUGIN_ID and SECRET_KEY on client side.
+        // Please use backend middleware to authenticate plugin.
+        // See documentation: https://stripo.email/plugin-api/
+        function initPlugin(template) {
+            const apiRequestData = {
+                emailId: 123
+            };
+            const script = document.createElement('script');
+            script.id = 'stripoScript';
+            script.type = 'text/javascript';
+            script.src = 'https://plugins.stripo.email/static/latest/stripo.js';
+            script.onload = function () {
+                window.Stripo.init({
+                    settingsId: 'stripoSettingsContainer',
+                    previewId: 'stripoPreviewContainer',
+                    codeEditorButtonId: 'codeEditor',
+                    undoButtonId: 'undoButton',
+                    redoButtonId: 'redoButton',
+                    locale: 'en',
+                    html: template.html,
+                    css: template.css,
+                    notifications: {
+                        info: notifications.info.bind(notifications),
+                        error: notifications.error.bind(notifications),
+                        warn: notifications.warn.bind(notifications),
+                        loader: notifications.loader.bind(notifications),
+                        hide: notifications.hide.bind(notifications),
+                        success: notifications.success.bind(notifications)
+                    },
+                    apiRequestData: apiRequestData,
+                    userFullName: 'Plugin Demo User',
+                    versionHistory: {
+                        changeHistoryLinkId: 'changeHistoryLink',
+                        onInitialized: function(lastChangeIndoText) {
+                            $('#changeHistoryContainer').show();
+                        }
+                    },
+                    getAuthToken: function (callback) {
+                        request('POST', 'https://plugins.stripo.email/api/v1/auth',
+                            JSON.stringify({
+                                pluginId: 'YOUR_PLUGIN_ID',
+                                secretKey: 'YOUR_SECRET_KEY'
+                            }),
+                            function(data) {
+                                callback(JSON.parse(data).token);
+                            });
+                    }
+                });
+            };
+            document.body.appendChild(script);
+        }
+        loadDemoTemplate(initPlugin);
+    </script>
 </body>
 </html>

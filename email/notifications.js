@@ -1,4 +1,4 @@
-var notifications = { 
+var notifications = {
     autoCloseTimeout: 4000,
     container: '.notification-zone',
     error: function (text, id, params) {

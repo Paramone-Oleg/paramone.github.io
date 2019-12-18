@@ -10,6 +10,7 @@
             width: 10px;
             min-height: 200px;
             cursor: col-resize;
+  background:#333;
         }
         #externalSystemContainer {
             background-color: darkgrey;
@@ -26,12 +27,13 @@
             min-width: 910px !important;   /* NOTE: This won't be respected! Explicit size of left forces the size to be fixed */
             background: #eee;
         }
-        #stripoSettingsContainer {
-            flex: 0 0 auto;  /* only manually resize */
-            width: 400px;
-            min-height: 100%;
-            min-width: 20em;
-            white-space: nowrap;
+#stripoSettingsContainer {
+    flex: 0 0 auto;
+    width: 400px;
+    min-height: 100%;
+    min-width: 20em;
+    max-width: calc(100vw - 700px);
+    white-space: nowrap;
 }
         .notification-zone {
             position: fixed;

@@ -7,8 +7,7 @@
     <style>
 .splitter {
             flex: 0 0 auto;
-            width: 18px;
-            background: url(../assets/vsizegrip.png) center center no-repeat #535353;
+            width: 10px;
             min-height: 200px;
             cursor: col-resize;
         }
@@ -77,6 +76,13 @@
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/jquery-resizable@1.0.6/resizable.min.js"></script>
+
+  <script>
+    $("#stripoSettingsContainer").resizable({
+        handleSelector: ".splitter",
+        resizeHeight: false
+    });
+  </script>
   
     <script type="application/javascript" src="https://paramone-oleg.github.io/email/notifications.js"></script>
     <script>
@@ -160,13 +166,6 @@
         }
         loadDemoTemplate(initPlugin);
     </script>
-
-  <script>
-    $("#stripoSettingsContainer").resizable({
-        handleSelector: ".splitter",
-        resizeHeight: false
-    });
-  </script>
   
 </body>
 </html>

@@ -47,6 +47,12 @@
         #changeHistoryLink {
             cursor: pointer;
         }
+      .panel-container {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid silver;
+    overflow: hidden;
+}
     </style>
 </head>
 <body>
@@ -59,9 +65,11 @@
     </div>
     <div class="notification-zone"></div>
     <div>
+  <div class="panel-container">
         <!--Plugin containers -->
         <div id="stripoSettingsContainer">Loading...</div>
         <div id="stripoPreviewContainer"></div>
+    </div>
     </div>
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

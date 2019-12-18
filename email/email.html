@@ -5,13 +5,15 @@
     <meta charset="UTF-8">
     <title>Stripo Plugin Example</title>
     <style>
-      .splitter, .splitter2,.splitter3 {
-            flex: 0 0 auto;
-            width: 18px;
-            background: url(../assets/vsizegrip.png) center center no-repeat #535353;
-            min-height: 200px;
-            cursor: col-resize;
-        }
+.resizer {
+  position:absolute;
+  top:0;
+  right:-8px;
+  bottom:0;
+  left:auto;
+  width:16px;   
+  cursor: col-resize;      
+}
         #externalSystemContainer {
             background-color: darkgrey;
             padding: 5px 0 5px 20px;
@@ -144,14 +146,8 @@
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-resize/1.1/jquery.ba-resize.min.js"></script>
   <script>
-    $("#stripoSettingsContainer").resizable({
-        handleSelector: ".splitter",
-        resizeHeight: false
-    });
-    $("#stripoPreviewContainer").resizable({
-        handleSelector: ".splitter-horizontal",
-        resizeWidth: false
-    });
+    $("#stripoSettingsContainer,#stripoPreviewContainer").resizableTableColumns();
   </script>
+
 </body>
 </html>

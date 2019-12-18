@@ -21,16 +21,20 @@
         #undoButton, #redoButton {
             display: none;
         }
-        #stripoSettingsContainer {
-          flex: 0 0 auto;
-         min-width: 400px;
-          white-space: nowrap;
-        }
         #stripoPreviewContainer {
-    flex: 1 1 auto;
-    padding: 10px;
-    width: 100%;
-    min-width: 200px;
+            flex: 1 1 auto; /* resizable */
+            padding: 5px;
+            width: 100%;
+            min-height: 200px;
+            min-width: 910px !important;   /* NOTE: This won't be respected! Explicit size of left forces the size to be fixed */
+            background: #eee;
+        }
+        #stripoSettingsContainer {
+            flex: 0 0 auto;  /* only manually resize */
+            width: 400px;
+            min-height: 200px;
+            min-width: 150px;
+            white-space: nowrap;
 }
         .notification-zone {
             position: fixed;

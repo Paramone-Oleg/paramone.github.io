@@ -22,13 +22,16 @@
             display: none;
         }
         #stripoSettingsContainer {
-            width: 400px;
-            float: left;
+          flex: 0 0 auto;
+         min-width: 400px;
+          white-space: nowrap;
         }
         #stripoPreviewContainer {
-            width: calc(100% - 400px);
-            float: left;
-        }
+    flex: 1 1 auto;
+    padding: 10px;
+    width: 100%;
+    min-width: 200px;
+}
         .notification-zone {
             position: fixed;
             width: 400px;
